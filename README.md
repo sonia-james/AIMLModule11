@@ -6,26 +6,30 @@ The goal of this analysis was to predict the price of used cars based on various
 # Data Preparation and Preprocessing:
 
 ## Data Exploration:**
+* Explored data :
+  Analysed and explored the data set and tried to understand the domain and business usecase. 
 * Analyze Missing Values:
-We identified missing values in the odometer column, which were replaced by the mean odometer reading for each car year. We also checked for other missing values across the dataset and dropped irrelevant columns (id, VIN, size) that contained excessive missing data or were non-predictive.
-*Converted Columns to Appropriate Types: Convert object etc types to appropriate type
+  Identified missing values in the odometer column, which were replaced by the mean odometer reading for each car year. We also checked for other missing values across the dataset and dropped irrelevant columns (id, VIN, size) that contained excessive missing data or were non-predictive.
+* Converted Columns to Appropriate Types: Convert object etc types to appropriate type
+* Handled missing data : Applied multiple ways to handle missing data. State utilized region data for missing value. Ordinal fields like condition/cylinders were set with 'unknown' tag for null values. Columns with large amount of missing date were dropped from analysis. Transmission column had 77% automatic value, this was set to null as well. For missing odometer, the mean of the mileage from corresponding year was used. 
 * Check for Outliers:
-To detect outliers, we visualized key features (price, odometer, year) using box plots. Outliers were identified as values that fell outside the typical range, such as unusually high prices or mileage. Q1-1.5 IQR --- Q3+1.5 IQR was applied on price column to exclude outliers. 
+To detect outliers, visualized key features (price, odometer, year) using box plots. Outliers were identified as values that fell outside the typical range, such as unusually high prices or mileage. Q1-1.5 IQR --- Q3+1.5 IQR was applied on price column to exclude outliers. 
 These preprocessing steps ensured the dataset was clean, with missing values and outliers appropriately handled, making it ready for model building.
 * Feature Engineering and Encoding:
-Categorical Encoding: We used One-Hot Encoding and James-Stein encoding to encode categorical values to numerical columns. Ordinal fields like conditions, cylinders were encoded with 1,2,3,4. 
+Categorical Encoding: Used One-Hot Encoding and James-Stein encoding to encode categorical values to numerical columns. Ordinal fields like conditions, cylinders were encoded with 1,2,3,4.
+* Scale data : Used StandardScalar() for scaling the data
 
 ## Exploratory Data Analysis (EDA):
 
 # Trends and Relationships:
-We observed a positive correlation between the year and price: As the year of a car increases, so does its price. This suggests that newer cars generally have a higher value compared to older cars.
-We also noticed a negative correlation between mileage and price: As the mileage (or odometer reading) increases, the price of the car tends to decrease. This aligns with the intuition that cars with more miles driven are generally worth less.
-Other variables such as the car make, model, and features also showed relationships with price, but these were handled using encoders.
+* Observed a positive correlation between the year and price: As the year of a car increases, so does its price. This suggests that newer cars generally have a higher value compared to older cars.
+* Noticed a negative correlation between mileage and price: As the mileage (or odometer reading) increases, the price of the car tends to decrease. This aligns with the intuition that cars with more miles driven are generally worth less.
 Visualizing Trends:
 Scatter plots and correlation matrices were used to visualize the relationships between features and the target variable (price). The visualizations confirmed the observed trends: a decrease in price with higher mileage and an increase in price with newer cars.
-Model Building:
 
-# We created two models to predict the price of used cars:
+#Model Building:
+
+## We created two models to predict the price of used cars:
 
 Linear Regression:
 A linear regression model was created to predict car prices using all the features. The linear regression algorithm assumes a linear relationship between the input features and the target price.
