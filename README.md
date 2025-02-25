@@ -19,17 +19,21 @@ These preprocessing steps ensured the dataset was clean, with missing values and
 Categorical Encoding: Used One-Hot Encoding and James-Stein encoding to encode categorical values to numerical columns. Ordinal fields like conditions, cylinders were encoded with 1,2,3,4.
 * Scale data : Used StandardScalar() for scaling the data
 
-## Exploratory Data Analysis (EDA):
+# Exploratory Data Analysis (EDA):
 
-# Trends and Relationships:
+## Trends and Relationships:
 * Observed a positive correlation between the year and price: As the year of a car increases, so does its price. This suggests that newer cars generally have a higher value compared to older cars.
 * Noticed a negative correlation between mileage and price: As the mileage (or odometer reading) increases, the price of the car tends to decrease. This aligns with the intuition that cars with more miles driven are generally worth less.
+* Cars in better condition has higher demand
+* Clean title status has high demand among customers than others
+* Type of car sedan/suv also impacts the price of the car
+
 Visualizing Trends:
 Scatter plots and correlation matrices were used to visualize the relationships between features and the target variable (price). The visualizations confirmed the observed trends: a decrease in price with higher mileage and an increase in price with newer cars.
 
-#Model Building:
+# Model Building:
 
-## We created two models to predict the price of used cars:
+## Created two models to predict the price of used cars:
 
 Linear Regression:
 A linear regression model was created to predict car prices using all the features. The linear regression algorithm assumes a linear relationship between the input features and the target price.
