@@ -1,19 +1,22 @@
 # AIMLModule11
-Explore the UsedCars data set,  to understand what factors make a car more or less expensive. Train the model to predict the car price from the available features like year, mileage, type, model etc. 
-
-# Introduction:
+## Introduction:
 
 The goal of this analysis was to predict the price of used cars based on various features available in the dataset. The dataset contains features such as year, mileage, and other relevant characteristics of the cars. Our primary focus was to evaluate how different factors impact the price of used cars and assess the performance of linear and ridge regression models in predicting car prices.
 
-# Data Preparation and Preprocessing:
+## Data Preparation and Preprocessing:
 
-Data Exploration:
-We explored the used cars dataset to understand the structure and the types of variables present.
-We identified that there were missing values in several columns, particularly in the odometer (mileage) column. These missing values were handled by replacing them with the mean mileage for each corresponding car year, ensuring that data for cars of the same model year was treated similarly.
+**#Data Exploration:**
+Analyze Missing Values:
+We identified missing values in the odometer column, which were replaced by the mean odometer reading for each car year. We also checked for other missing values across the dataset and dropped irrelevant columns (id, VIN, size) that contained excessive missing data or were non-predictive.
+Converted Columns to Appropriate Types: Convert object etc types to appropriate type
+Check for Outliers:
+To detect outliers, we visualized key features (price, odometer, year) using box plots. Outliers were identified as values that fell outside the typical range, such as unusually high prices or mileage. Q1-1.5 IQR --- Q3+1.5 IQR was applied on price column to exclude outliers. 
+These preprocessing steps ensured the dataset was clean, with missing values and outliers appropriately handled, making it ready for model building.
+
 Feature Engineering and Encoding:
-Categorical Encoding: We used One-Hot Encoding to transform categorical variables (like car make, model, etc.) into a format suitable for the regression models.
-Numerical Transformation: We ensured that numerical columns like year, mileage, and price were in appropriate formats (e.g., converting non-numeric entries into NaN and handling them accordingly).
-Exploratory Data Analysis (EDA):
+Categorical Encoding: We used One-Hot Encoding and James-Stein encoding to encode categorical values to numerical columns. Ordinal fields like conditions, cylinders were encoded with 1,2,3,4. 
+
+## Exploratory Data Analysis (EDA):
 
 # Trends and Relationships:
 We observed a positive correlation between the year and price: As the year of a car increases, so does its price. This suggests that newer cars generally have a higher value compared to older cars.
