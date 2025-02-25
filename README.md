@@ -55,16 +55,16 @@ These models can be used to predict the price for a new car with given features.
 
 # Conclusion:
 
-# Based on the analysis and model evaluations, the following conclusions can be drawn:
+## Based on the analysis and model evaluations, the following conclusions can be drawn:
 
-The relationship between year and price, as well as between mileage and price, is consistent with real-world intuition and is well captured by both the linear and ridge regression models.
-Similar key insigts were drawn on mileage, condition , title_status, type etc to affect the price of the car
-While both models performed well, the Lineat regression model provided slightly better results, making it more robust for this dataset.
-Future improvements could involve exploring additional features (model) and experimenting with other regression models, such as Lasso or ElasticNet, which might offer further enhancements in predictive performance.
+*The relationship between year and price, as well as between mileage and price, is consistent with real-world intuition and is well captured by both the linear and ridge regression models.
+*Similar key insigts were drawn on mileage, condition , title_status, type etc to affect the price of the car
+*While both models performed well, the Linear regression model provided slightly better results, making it more robust for this dataset.
+*The model could be used to predict plausible selling price for a car 
+*Future improvements could involve exploring additional features (model) and experimenting with other regression models, such as Lasso or ElasticNet, which might offer further enhancements in predictive performance.
 
-# Recommendations for Further Analysis:
-Feature Expansion: Incorporating additional features such as the car model, could improve the predictive power of the models.
-Better Preparation: We could involve better handling for null values with more advanced techniques which could improve the overall quality of the data set. 
-Model Refinement: Experimenting with more advanced machine learning algorithms, such as decision trees or ensemble methods (Random Forest, Gradient Boosting), could provide a more complex and potentially higher-performing model.
-Outlier Detection: Further analysis on outliers in car prices and mileage could help improve model accuracy, as extreme values could skew predictions.
-This evaluation provides a solid foundation for understanding the trends in used car prices and outlines potential areas for further improvement in predictive modeling.
+## Recommendations for Further Analysis:
+*Feature Expansion: Incorporating additional features such as the car model, could improve the predictive power of the models.
+*Better Preparation: We could involve better handling for null values with more advanced techniques which could improve the overall quality of the data set. 
+*Model Refinement: Experimenting with more advanced machine learning algorithms, such as decision trees or ensemble methods (Random Forest, Gradient Boosting), could provide a more complex and potentially higher-performing model.
+*Outlier Detection: Further analysis on outliers in car prices and mileage could help improve model accuracy, as extreme values could skew predictions.
