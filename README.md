@@ -36,7 +36,7 @@ The models were evaluated using various metrics, including the Mean Squared Erro
 MSE (Mean Squared Error): The MSE was calculated to measure the average squared difference between the observed actual outcomes and the model's predictions.
 R² (R-squared): The R² score tells us how well the model explains the variance in the data. A higher R² value indicates a better fit of the model to the data.
 MSE = 60856811.91417967
-R² = 62.776
+R² = 62.776 \
 **Ridge Regression Model:**
 MSE and R²: After tuning the alpha hyperparameter using GridSearchCV, the Ridge regression model performed similarly to the linear regression model but with a slightly better ability to generalize to unseen data due to the regularization effect.
 The optimal value of alpha was found to be around 10, indicating a good balance between fitting the data and controlling overfitting.
