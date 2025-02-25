@@ -1,19 +1,18 @@
 # AIMLModule11
-## Introduction:
+# Introduction:
 
 The goal of this analysis was to predict the price of used cars based on various features available in the dataset. The dataset contains features such as year, mileage, and other relevant characteristics of the cars. Our primary focus was to evaluate how different factors impact the price of used cars and assess the performance of linear and ridge regression models in predicting car prices.
 
-## Data Preparation and Preprocessing:
+# Data Preparation and Preprocessing:
 
-**#Data Exploration:**
-Analyze Missing Values:
+## Data Exploration:**
+* Analyze Missing Values:
 We identified missing values in the odometer column, which were replaced by the mean odometer reading for each car year. We also checked for other missing values across the dataset and dropped irrelevant columns (id, VIN, size) that contained excessive missing data or were non-predictive.
-Converted Columns to Appropriate Types: Convert object etc types to appropriate type
-Check for Outliers:
+*Converted Columns to Appropriate Types: Convert object etc types to appropriate type
+* Check for Outliers:
 To detect outliers, we visualized key features (price, odometer, year) using box plots. Outliers were identified as values that fell outside the typical range, such as unusually high prices or mileage. Q1-1.5 IQR --- Q3+1.5 IQR was applied on price column to exclude outliers. 
 These preprocessing steps ensured the dataset was clean, with missing values and outliers appropriately handled, making it ready for model building.
-
-Feature Engineering and Encoding:
+* Feature Engineering and Encoding:
 Categorical Encoding: We used One-Hot Encoding and James-Stein encoding to encode categorical values to numerical columns. Ordinal fields like conditions, cylinders were encoded with 1,2,3,4. 
 
 ## Exploratory Data Analysis (EDA):
